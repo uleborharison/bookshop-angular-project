@@ -1,0 +1,15 @@
+<li class="lex">
+    <div class="flex justify-around">
+        <!-- <p>{{i+1}}</p> -->
+        <img [src]="book.src" [alt]="book.name" width="100">
+        <div class="wid">
+            <p> {{book.name}}</p>
+            <p> {{ book.author }}</p>
+            <p>{{ book.amount | currency: "INR"}}</p>
+            <button class="border-2 rounded bg-yellow-300" *ngIf=" !isInCart" (click)="AddToCart()">Add to
+                cart</button>
+            <button *ngIf="isInCart" (click)="removeFromCart()" class="rounded bg-yellow-300">Remove from Cart</button>
+        </div>
+        <!-- (click)="AddToCart()" -->
+    </div>
+</li>

@@ -1,0 +1,17 @@
+/* ul {
+    display: flex;
+    display: flex;
+}
+
+li {
+    text-overflow: ellipsis;
+    list-style: none;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+} */
+
+ul {
+    /* background-color: rgb(18, 2, 34); */
+    height: auto;
+}

@@ -1,0 +1,43 @@
+<div class="my-5" class="flex m-auto h-screen justify-center">
+    <form (ngSubmit)="submit()" class="p-4 rounded-lg border m-auto w-1/3" #myForm="ngForm">
+        <h1 class="text-center text-left-xl">Register</h1>
+        <div class="my-5 w-full">
+            <label for="email">Email</label>
+            <input type="text" class="p-2 rounded w-full border" placeholder="Email Address" [(ngModel)]="form.email"
+                name="email" #email="ngModel" required="">
+        </div>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="p-2 bg-red-300 text-red-800 rounded">Email
+            field must be valid</div>
+
+        <div class="my-5 w-full">
+            <label for="password">Password</label>
+            <input type="password" class="p-2 rounded w-full border" placeholder="Password" [(ngModel)]="form.password"
+                name="password" #password="ngModel" required="">
+        </div>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="p-2 bg-red-300 text-red-800 rounded">Password field must
+            be valid</div>
+
+        <div class="my-5 w-full">
+            <label for="password">Password</label>
+            <input type="password" class="p-2 rounded w-full border" placeholder="Confirm Password"
+                [(ngModel)]="form.confirm_password" name="password" #confirm_password="ngModel" required="">
+        </div>
+        <div *ngIf="confirm_password.invalid && (confirm_password.dirty || password.touched)"
+            class="p-2 bg-red-300 text-red-800 rounded">Confirm Password field must
+            be valid</div>
+
+        <div class="my-5 w-full">
+            <button type="Submit" class="p-2 w-full bg-green-700 text-white hover:bg-green-900 rounded">
+
+                <ng-container *ngIf="isLoading()">
+                    Loading...
+                </ng-container>
+                <ng-container *ngIf="!isLoading()">
+                    Submit
+                </ng-container>
+            </button>
+        </div>
+    </form>
+
+</div>

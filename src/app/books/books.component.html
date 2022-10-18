@@ -1,0 +1,31 @@
+<!-- <div>
+    <input type="text" [(ngModel)]="myAppname" />
+    <p>{{ myAppname }}</p>
+</div> -->
+
+<!-- <button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="isShowing">Hide</ng-container>
+    <ng-container *ngIf="!isShowing">Show</ng-container>
+</button> -->
+
+<h1 class="text-center text-xl font-weight-bold">Programming Book List!</h1>
+<button (click)="isShowing =!isShowing" class="border rounded">Toggle</button>
+<ul *ngIf="isShowing" class="flex">
+    <ng-container *ngFor="let singleBook of books; let i = index">
+        <!-- (bookEmitter)="AddToCart($event)"  -->
+        <app-book [book]="singleBook"></app-book>
+    </ng-container>
+</ul>
+
+
+<!-- <table>
+    <tr>
+        <td>gap</td>
+        <td>tap</td>
+        <td>app</td>
+    </tr>
+    <tr>
+        <td>hap</td>
+        <td>lap</td>
+    </tr>
+</table> -->

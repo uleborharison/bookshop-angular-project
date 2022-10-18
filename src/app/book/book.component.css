@@ -1,0 +1,21 @@
+.wid {
+    /* margin: 10px 10px; */
+    overflow: none;
+    text-align: center;
+}
+
+p,
+button {
+    margin: 5px 5px;
+}
+
+.lex {
+    /* margin: 10px 10px; */
+    /* width: 500px; */
+    float: none !important;
+    padding: 20px 20px;
+}
+
+img {
+    height: 150px;
+}
